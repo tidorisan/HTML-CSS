@@ -11,6 +11,8 @@
     clear: both;
 }
 
+/**自力でやった後に回答と比較して考え方やスマートなやり方を身につける*/
+
 header {
 	width: 100%;
 	height: 50px;
@@ -19,17 +21,23 @@ header {
 
 main {
 	width: 960px;
-	height: 300px;
-	background-color: red;
-	margin: auto auto;
+	/*height: 300px;*/
+	/*background-color: red;*/
+	margin: 50px auto;
+/*	height 要素中央揃えはwidth と異なる　上下の余白分記入する　heightの幅も記入しなくて良い*/
 
 }
 
 .box {
 	width: 300px;
+/*	なぜheght記載しなくても良いのか　子要素によって自動的に設定されるから　そちらが設定され設定されれば親要素いらない
 	height: 300px;
-	background-color: #eeeeee;
+*/	background-color: #eeeeee;
+	padding: 10px;
 	float: left;
+	border: 1px solid #eee;
+	position: relative;
+	/*これ大切　子要素position-absolute があり　親要素にposition-relateive 親要素枠の中の左上がスタート位置*/
 }
 
 .box-center {
@@ -37,17 +45,58 @@ main {
 }
 
 .main-visual {
-	width: 280px;
+/*	width: 280px;*/
+/*上下　左右　それぞれが親要素　padding で指定されている場合記入しn　*/
 	height: 150px;
-	background-color: blue;
-	margin: 10px 10px 15px 10px;
+/*	background-color: blue;*/
+/*	margin: 10px 10px 15px 10px;*/
+	background-image: url(img1-9/flow01.png);
+	background-size: cover;
+	background-position: center;
+}
+.main-img2 {
+	height: 150px;
+	background-image: url(img1-9/flow02.png);
+	background-size: cover;
+	background-position: center;
 }
 
-.main-text {
+.main-img3 {
+	height: 150px;
+	background-image: url(img1-9/flow03.png);
+	background-size: cover;
+	background-position: center;
+}
+/*.main-text {
 	width: 280px;
-	height: 125px;
+	height: 135px;
 	background-color: orange;
-	margin:  10px 10px 10px;
+	margin:  0 10px 10px 10px;
+}*/
+
+
+
+.box .step {
+	background-color: #ff9a4b;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: white;
+
+}
+
+.box .title{
+	margin:  15px 0 5px 0;
+/*	width: 100%;
+	height: 50px;*/
+	/*background-color: #aaaaaa;*/
+/*	margin-bottom:  5px;*/
+}
+
+.main-text-bottom .p {
+	width: 100%;
+	height: 50px;
+	background-color: red;
 
 }
 
